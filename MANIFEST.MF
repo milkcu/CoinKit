@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: lib/Sign16.jar
+Main-Class: api.Main

@@ -6,7 +6,7 @@ public class Giver {
 	private String dealtime;  // yyyyMMddhhmmss
 	private String dealno;  // yyyyMMddhhmmss + 88888888
 	
-	final private String company_code = "";
+	final private String company_code = "1008611";
 	final private String method = "companyCreditHandsel";
 	final private String portalID = "003";
 	final private String portalType = "WWW";
@@ -26,6 +26,7 @@ public class Giver {
 	public String run() {
 		qstr = "company_code=" + company_code + "&credit=" + coinnum + "&method=" + method + "&msisdn=" + mobile + 
 				"&oper_time=" + dealtime + "&portalID=" + portalID + "&portalType=" + portalType + "&transactionID=" + dealno;
+		//System.out.println(qstr);
 		signer = new Signer(qstr);
 		sign = signer.get();
 		param = qstr + "&sign=" + sign;
